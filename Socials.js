@@ -27,25 +27,17 @@ client.on('message', (channel, tags, message, self) => {
 
     let commandName = message;
 
-    if (commandName === '!social') {
+    if (commandName === '!socials') {
         console.log(channel, "Hello")
-        client.say(channel, `Twitter: ${twitter} Youtube: ${youtube}`)
+        client.say(channel,`                                                               
+        Twitter: ${twitter}      
+        Youtube: ${youtube}`)
+        setTimeout(10000)
     } 
 });
-// function onMessageHandler (channel, tags, message, self) {
-//     let twitter = 'https://twitter.com/Kajo_ssb'
-//     let youtube = 'https://www.youtube.com/channel/UCcVqEruZX-oIgbkmfR2Dp7w'
-//     self = 'kajo88bot' 
-//     if (self) {return}
 
-//     let commandName = message;
-
-//     if (commandName === '!socials') {
-//         client.say(channel, `Twitter: ${twitter} Youtube: ${youtube}`)
-//     } 
-// };
-// let timeout = () => {onMessageHandler()}
 function onConnectedHandler (addr, port) {
+  client.say(channel, )
     console.log(`* Connected to ${addr}:${port}`);
 }
 
