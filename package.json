@@ -2,5 +2,23 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "tmi.js": "^1.8.5"
-  }
+  },
+  "name": "kalestwitchbot",
+  "version": "1.0.0",
+  "main": "Socials.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stuffy3/kajo88Twitch-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stuffy3/kajo88Twitch-Bot/issues"
+  },
+  "homepage": "https://github.com/stuffy3/kajo88Twitch-Bot#readme",
+  "description": ""
 }
