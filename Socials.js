@@ -41,9 +41,7 @@ client.on('message', (channel, tags, message, self) => {
 
     if (commandName === '!socials') {
         console.log(channel, "Hello")
-        client.say(channel, `                                                       
-        Twitter: ${twitter}      
-        Youtube: ${youtube}`)
+        client.say(channel, ` <3 Check out my socials! <3 Twitter: ${twitter} Youtube: ${youtube}`).then((data) => {console.log(data)})
       
     } 
 });
