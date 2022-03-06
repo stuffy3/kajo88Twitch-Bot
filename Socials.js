@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const tmi = require('tmi.js');
 
-let deathCount = 3
+let deathCount = 34
 let jaxonsDeathCount = 10
 let twitter = 'https://www.twitter.com/Kajo_ssb'
 let youtube = 'https://bit.ly/3viQgHw' 
