@@ -2,8 +2,7 @@ require('dotenv').config();
 
 const tmi = require('tmi.js');
 
-let deathCount = 34
-let jaxonsDeathCount = 10
+
 let twitter = 'https://www.twitter.com/Kajo_ssb'
 let youtube = 'https://bit.ly/3viQgHw' 
 
@@ -26,7 +25,7 @@ function timeoutLoop(delay) { setTimeout(function () {
 
 function socialsLoop(channel) {
   console.log('TimeoutLoop')
-  client.say(channel, ` SeemsGood Check out my socials! SeemsGood  Twitter: ${twitter}  Youtube: ${youtube}`)
+  client.say(channel, ` PogChamp Check out my socials! PogChamp  Twitter: ${twitter}  Youtube: ${youtube}`)
   timeoutLoop(1500000)
 }
 
@@ -43,22 +42,16 @@ client.on('message', (channel, tags, message, self) => {
 
 
     if (commandName === '!commands'){
-      client.say(channel, 'Current Commands: !socials, !death, !resetDeath')
+      client.say(channel, 'Current Commands: !socials, !discord')
     }
     if (commandName === '!socials') {
-        client.say(channel, ` <3 Check out my socials! <3 Twitter: ${twitter} Youtube: ${youtube}`).then((data) => {console.log(data)})
+        client.say(channel, ` PogChamp Check out my socials! PogChamp Twitter: ${twitter} Youtube: ${youtube}`).then((data) => {console.log(data)})
       
     } 
-    if (commandName === '!death' ){
-      deathCount++
-      console.log(deathCount)
-      client.say(channel, `Current Death Count is ${deathCount}`)
-    }
+    
 
-    if (commandName === '!jaxDeath' ){
-      jaxonsDeathCount++
-      console.log(jaxonsDeathCount)
-      client.say(channel, `Jaxon's current Death Count is ${jaxonsDeathCount}`)
+    if (commandName === '!discord' ){
+      client.say(channel, `Join the Discord: `)
     }
 
     // if (tags.username === 'stuffy2' || 'kajo88' || 'infinitesoldier' && commandName === '!resetDeath' ){
