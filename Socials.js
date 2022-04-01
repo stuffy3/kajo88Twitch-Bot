@@ -46,9 +46,10 @@ client.on('message', (channel, tags, message, self) => {
     }
     if (commandName === '!socials') {
         client.say(channel, ` PogChamp Check out my socials! PogChamp Twitter: ${twitter} Youtube: ${youtube}`).then((data) => {console.log(data)})
-      
     } 
-    
+    if (commandName === '!follow' ){
+      client.say(channel, `PogChamp Be sure to give the stream a follow! PogChamp`)
+    }
 
     if (commandName === '!discord' ){
       client.say(channel, `Join the Discord: `)
