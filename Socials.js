@@ -47,7 +47,7 @@ client.on('message', (channel, tags, message) => {
     let commandName = message;
 
     if (commandName === '!commands'){
-      client.say(channel, 'Current Commands:!follow, !socials, !uptime')
+      client.say(channel, 'Current Commands: !follow, !socials, !uptime')
     }
     if (commandName === '!socials') {
         client.say(channel, ` PogChamp Check out my socials! PogChamp Twitter: ${twitter} Youtube: ${youtube}`).then((data) => {console.log(data)})
@@ -56,10 +56,20 @@ client.on('message', (channel, tags, message) => {
       client.say(channel, `PogChamp Be sure to give the stream a follow! PogChamp`)
     }
     if (commandName === '!uptime' ){
-      let newTime = new Date.getTime()
-      let upTime = newTime - streamStartTime
-      client.say(channel, `The stream has been live for ${upTime}`)
+      let newTime = new Date().getTime()
+      let upTime = Math.round((newTime - streamStartTime) / 60000)
+      if(upTime >= 60){
+          let hour = Math.floor(upTime/60)
+          let minutes = upTime - 60
+          if(hour >= 2){
+            client.say(channel, `The stream has been live for ${hour}hours and ${minutes} minutes.`)
+          } else {
+          client.say(channel, `The stream has been live for ${hour} hour and ${minutes} minutes.`)
+          }
+      } else {
+      client.say(channel, `The stream has been live for ${upTime} minutes.`)
     }
+  }
 });
 
 
