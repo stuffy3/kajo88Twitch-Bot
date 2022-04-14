@@ -4,7 +4,8 @@ const tmi = require('tmi.js');
 
 
 let twitter = 'https://www.twitter.com/Kajo_ssb'
-let youtube = 'https://bit.ly/3viQgHw' 
+let youtube = 'https://bit.ly/3viQgHw'
+ 
 let streamStartTime = new Date().getTime()
 console.log(streamStartTime)
 // Define configuration options
@@ -19,6 +20,7 @@ const client = new tmi.Client({
     password: process.env.TWITCH_OAUTH_TOKEN
   },
 });
+
 client.on('connected', onConnectedHandler);
 
 client.connect();
@@ -71,6 +73,7 @@ client.on('message', (channel, tags, message) => {
     }
   }
 });
+
 
 
 
